@@ -1,0 +1,1 @@
+// This file defines the behaviour of agents on what folders or what files it has access to and the rules it need to follow while they are accessing the snapshots 
