@@ -1,0 +1,13 @@
+version: "1.0"
+agent:
+  name:
+  description:
+  model:
+    provider:
+    name:
+    endpoint:
+    max_tokens:
+  auth:
+    token_env_var:
+  system_prompt:
+  tools:
