@@ -1,0 +1,27 @@
+version: "1.0"
+
+agent:
+  name: ""
+  description: ""
+
+  model:
+    provider: ""
+    name: ""
+    endpoint: ""
+    temperature: 0.0
+    max_tokens: 0
+
+  context:
+    env_file: ""
+    instructions_file: ""
+    track_files: []
+    ignore: []
+
+  system_prompt: ""
+
+  tools:
+    - name: ""
+      enabled: false
+      permissions: []
+      allowlist: []
+      auth_env: ""
