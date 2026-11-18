@@ -5,22 +5,22 @@ namespace cvc.init;
 public class Init
 {
     public static string Folder = ".cvc";
-    public static string ai_yaml  = "agent.yaml";
-    public static string agent_md  = "AGENTS.md";
-    public static string secret_file  = ".env";
-    public static string path  = Directory.GetCurrentDirectory();
+    public static string AiYaml = "agent.yaml";
+    public static string AgentMd = "AGENTS.md";
+    public static string SecretFile = ".env";
+    public static string CurrentDirectory = Directory.GetCurrentDirectory();
     public static void Initialize()
     {
         if (Directory.Exists(Folder))
         {
-            System.Console.WriteLine($"cvc already initialized at {path}");
+            System.Console.WriteLine($"cvc already initialized at {CurrentDirectory}");
         }
         else
         {
             Directory.CreateDirectory(Folder);
             var file = new (string Name, string Content)[]
             {
-          (ai_yaml,"""
+          (AiYaml,"""
     version: "1.0"
 
     agent:
@@ -49,8 +49,8 @@ public class Init
           allowlist: []
           auth_env: ""
     """),
-          (secret_file,"ai_api_token="),
-          (agent_md,@"# AGENTS.md
+          (SecretFile,"ai_api_token="),
+          (AgentMd,@"# AGENTS.md
 
 ## Project Overview
 - **Name:** `cvc` (Context Version Control)
@@ -77,11 +77,11 @@ public class Init
 - Keep configuration schemas flat and easy to parse without heavy external dependencies.
 - Document public CLI flags, subcommands, and manifest fields concisely.")
             };
-      foreach(var filename in file) 
-      {
-	      File.WriteAllText(Path.Combine(Folder,filename.Name),filename.Content);
-      }
-      System.Console.WriteLine($"cvc initialized in {path}");
+            foreach (var filename in file)
+            {
+                File.WriteAllText(Path.Combine(Folder, filename.Name), filename.Content);
+            }
+            System.Console.WriteLine($"cvc initialized in {CurrentDirectory}");
         }
     }
 }

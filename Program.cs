@@ -1,5 +1,6 @@
 ﻿// Main entry point for managing all commands 
 using cvc.init;
+using cvc.establish;
 namespace cvc;
 
 public class Program
@@ -21,7 +22,11 @@ public class Program
                 break;
 
             case "init":
-		Init.Initialize();
+                Init.Initialize(); // This function creates initialzes cvc in the current working directory
+                break;
+             case "establish":
+                System.Console.WriteLine("cvc currently establishing a connection to your LLM model");
+                var _ = Establish.Connection();
                 break;
             default:
                 System.Console.WriteLine($"cvc <<{command}>> is either under construction or donot supported");
