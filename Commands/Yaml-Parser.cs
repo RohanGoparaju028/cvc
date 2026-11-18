@@ -1,35 +1,35 @@
  namespace cvc.yaml;
 
 public class Yaml {
-  public string Version {get;set;}
-  public Agent Agent {get;set;} 
+  public string Version {get;set;} = string.Empty;
+  public Agent Agent {get;set;} = new();
 }
 
 public class Agent {
-  public string Name {get;set;} 
-  public string Description {get;set;} 
-  public Model Model {get;set;} = null;
-  public Context Context {get;set;} = null;
-  public string SystemPrompt {get;set;} 
-  public Tools[] Tools {get;set;} = null;
+  public string Name {get;set;} = string.Empty;
+  public string Description {get;set;} = string.Empty;
+  public Model Model {get;set;} = new();
+  public Context Context {get;set;} = new();
+  public string SystemPrompt {get;set;} = string.Empty;
+  public Tools[] Tools {get;set;} = [];
 }
 public class Model {
-  public string Provider {get;set;}
-  public string Name {get;set;}
-  public string Endpoint {get;set;} 
+  public string Provider {get;set;} = string.Empty;
+  public string Name {get;set;} = string.Empty;
+  public string Endpoint {get;set;} = string.Empty;
   public double Temperature {get;set;}  
   public int MaxTokens {get;set;}
 }
 public class Context {
-  public string EnvFile {get;set;} 
-  public string InstructionsFile {get;set;} 
-  public string[] TrackFiles {get;set;} 
-  public string[] Ignore {get;set;} 
+  public string EnvFile {get;set;} = string.Empty;
+  public string InstructionsFile {get;set;} = string.Empty;
+  public string[] TrackFiles {get;set;} = [];
+  public string[] Ignore {get;set;} = [];
 }
 public class Tools {
-  public string Name {get;set;}
+  public string Name {get;set;} = string.Empty;
   public bool Enabled {get;set;}
-  public string[] Permissions {get;set;} 
-  public string[] Allowlist {get;set;}
-  public string AuthEnv {get;set;}
+  public string[] Permissions {get;set;} = [];
+  public string[] Allowlist {get;set;} = [];
+  public string AuthEnv {get;set;} = string.Empty;
 }
