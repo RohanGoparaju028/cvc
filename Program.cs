@@ -24,7 +24,7 @@ public class Program
             case "init":
                 Init.Initialize(); // This function creates initialzes cvc in the current working directory
                 break;
-             case "establish":
+            case "establish":
                 System.Console.WriteLine("cvc currently establishing a connection to your LLM model");
                 var _ = Establish.Connection();
                 break;
