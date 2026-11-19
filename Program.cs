@@ -18,7 +18,7 @@ public class Program
         {
             case "help":
                 System.Console.WriteLine("cvc stands for context version control. The main purpose of cvc is to track the ever changing context,design patterns and decisions that are set in the current ai agent conversation to ensure modularity and determinism when different AI models are used by same/different user ");
-                System.Console.WriteLine("cvc init is the first command that you want to use in an uninitialized repository/directory. It generates a .cvc folder that includes agent.yaml file for configuration,.env file for agent api for model building and interctions and finally configurable AGENTS.md to define the behavior of AI agents inide the .cvc folder ");
+                System.Console.WriteLine("cvc init creates .cvc/agent.yaml for configuration and .cvc/AGENTS.md for agent instructions.");
                 break;
 
             case "init":

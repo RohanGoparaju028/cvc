@@ -7,7 +7,6 @@ public class Init
     public static string Folder = ".cvc";
     public static string AiYaml = "agent.yaml";
     public static string AgentMd = "AGENTS.md";
-    public static string SecretFile = ".env";
     public static string CurrentDirectory = Directory.GetCurrentDirectory();
     public static void Initialize()
     {
@@ -49,7 +48,6 @@ public class Init
           allowlist: []
           auth_env: ""
     """),
-          (SecretFile,"ai_api_token="),
           (AgentMd,@"# AGENTS.md
 
 ## Project Overview
@@ -58,7 +56,6 @@ public class Init
 - **Directory Structure:**
   - `.cvc/agent.yaml` — Agent configuration, model endpoints, and tool permissions.
   - `.cvc/Agents.md` — Behavioral instructions, repository rules, and execution constraints.
-  - `.cvc/.env` — Local environment variables and API secrets (never commit).
   - `.cvc/snapshots/` — Immutable context state snapshots.
 
 ## Agent Guidelines

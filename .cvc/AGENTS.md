@@ -6,7 +6,6 @@
 - **Directory Structure:**
   - `.cvc/agent.yaml` — Agent configuration, model endpoints, and tool permissions.
   - `.cvc/Agents.md` — Behavioral instructions, repository rules, and execution constraints.
-  - `.cvc/.env` — Local environment variables and API secrets (never commit).
   - `.cvc/snapshots/` — Immutable context state snapshots.
 
 ## Agent Guidelines
